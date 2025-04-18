@@ -24,13 +24,16 @@ import SessionStorageUtil, {
 import Piece from './classes/Piece.ts'
 
 export const socket = io('https://chess-backend.speedle.dev', {
+
    withCredentials: true,
    extraHeaders: {
-      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Origin": "https://scintillating-llama-2c32b3.netlify.app",
       "Access-Control-Allow-Credentials": "true",
       "Access-Control-Allow-Headers": "Content-Type",
       "Access-Control-Allow-Methods": "GET, POST",
-   }
+   },
+   transports: ['websocket'],
+   
 })
 
 export const board = new Board()
