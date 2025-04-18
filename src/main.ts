@@ -23,7 +23,7 @@ import SessionStorageUtil, {
 } from './utils/sessionStorage.ts'
 import Piece from './classes/Piece.ts'
 
-export const socket = io('http://localhost:4004', {
+export const socket = io('https://chess-backend.speedle.dev', {
    withCredentials: true,
 })
 
