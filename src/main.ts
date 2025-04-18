@@ -25,6 +25,9 @@ import Piece from './classes/Piece.ts'
 
 export const socket = io('https://chess-backend.speedle.dev', {
    withCredentials: true,
+   extraHeaders: {
+      "Access-Control-Allow-Origin": "https://scintillating-llama-2c32b3.netlify.app",
+   }
 })
 
 export const board = new Board()
